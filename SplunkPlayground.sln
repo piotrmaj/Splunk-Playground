@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplunkPlayground", "SplunkPlayground\SplunkPlayground.csproj", "{94469F99-7063-4AC9-99B8-AF1BB93CD9E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Splunk.DAL", "Splunk.DAL\Splunk.DAL.csproj", "{A5D81CDA-4D78-4736-8726-4B7DD4BCCFE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94469F99-7063-4AC9-99B8-AF1BB93CD9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94469F99-7063-4AC9-99B8-AF1BB93CD9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94469F99-7063-4AC9-99B8-AF1BB93CD9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94469F99-7063-4AC9-99B8-AF1BB93CD9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D81CDA-4D78-4736-8726-4B7DD4BCCFE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D81CDA-4D78-4736-8726-4B7DD4BCCFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D81CDA-4D78-4736-8726-4B7DD4BCCFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D81CDA-4D78-4736-8726-4B7DD4BCCFE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
