@@ -1,14 +1,15 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
+using System.Web;
 using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using Serilog;
 using Splunk.DAL;
+using SplunkPlayground.ActionFilters;
 
 namespace SplunkPlayground
 {
-    public class WebApiApplication : System.Web.HttpApplication
+    public class WebApiApplication : HttpApplication
     {
         protected void Application_Start()
         {
@@ -29,14 +30,21 @@ namespace SplunkPlayground
                 .CreateLogger();
             }).SingleInstance();
 
+
             // Get your HttpConfiguration.
             var config = GlobalConfiguration.Configuration;
+
+            //builder.RegisterType<LoggingActionFilter>().PropertiesAutowired();
 
             // Register your Web API controllers.
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
             // OPTIONAL: Register the Autofac filter provider.
             builder.RegisterWebApiFilterProvider(config);
+
+            builder.Register(c => new LoggingActionFilter(c.Resolve<ILogger>()))
+                .AsWebApiActionFilterFor<ApiController>()
+                .InstancePerRequest();
 
             builder.RegisterType<SplunkDbContext>().InstancePerRequest();
 
